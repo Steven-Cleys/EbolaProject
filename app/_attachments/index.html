@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+html,body,#map-canvas {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+</style>
+<link rel='stylesheet' href='style/bootstrap.min.css' type='text/css'>
+<link rel="stylesheet" href="style/bootstrap-slider.css" type="text/css">
+<link rel="stylesheet" href="style/main.css" type="text/css">
+<link rel="stylesheet" href="style/FeedEk.css" type="text/css">
+<link rel="stylesheet" href="style/demo.css" type="text/css">
+<link href="style/share.css" rel="stylesheet">
+
+<script src="js/jquery.js"></script>
+<script src="js/moment.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-slider.js"></script>
+<script src='js/Chart.js'></script>
+<script src='js/highcharts.js'></script>
+<script src='js/legend.js'></script>
+<script src="js/FeedEk.js"></script>
+<script src="js/mainscript.js"></script>
+<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeHlNzcLQdnV4sjkgMWAwrJ1dJJMzYP-s&libraries=geometry"></script>
+<script type="text/javascript">
+	google.maps.event.addDomListener(window, 'load', initMap);
+</script>
+
+<div class="jumbotron">
+	<h1>
+		Ebola <small>New generation journalism</small>
+	</h1>
+</div>
+
+</head>
+<body class="container">
+
+	<div align="right">
+		<!-- Twitter -->
+		<a href="http://twitter.com/home?status=" title="Share on Twitter"
+			target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i>
+			Twitter</a>
+		<!-- Facebook -->
+		<a href="https://www.facebook.com/sharer/sharer.php?u="
+			title="Share on Facebook" target="_blank" class="btn btn-facebook"><i
+			class="fa fa-facebook"></i> Facebook</a>
+		<!-- Google+ -->
+		<a href="https://plus.google.com/share?url=" title="Share on Google+"
+			target="_blank" class="btn btn-googleplus"><i
+			class="fa fa-google-plus"></i> Google+</a>
+	</div>
+
+	<br>
+
+	<div class="row center-block" align="left">
+
+		<button id="startbtn" type="button" class="btn btn-primary"
+			onClick="init()" style="margin-right: 10px">Start</button>
+		<input id="ex1" data-slider-id='ex1Slider' data-slider-tooltip="hide"
+			type="text" data-slider-min="1" data-slider-max="61"
+			data-slider-step="1" data-slider-value="0" />
+
+		
+		<div>
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+
+					<div style="position: absolute; top: 0px; right: 0px">
+						<a class="twitter-timeline"
+							href="https://twitter.com/MikeDeBeck/lists/ebola-experts"
+							data-widget-id="543521339483910144">Tweets van
+							https://twitter.com/MikeDeBeck/lists/ebola-experts</a>
+					</div>
+
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<br><br><br>
+
+
+	<br>
+	<br>
+	<div class="row center-block" id="map-canvas"
+		style="height: 70%; width: 80%; text-align: center" align="center"></div>
+
+
+	<br>
+
+
+	<div class="row" id="output" style="width: 70%; align: left"></div>
+
+	<div class="row">
+
+
+		<canvas class="col-md-3" id="buyers" width="650" height="450"></canvas>
+		<div id="chart"> </div>
+
+		<div class="col-xs-3" style="position: absolute; right: 20%"
+			id="divRss"></div>
+	</div>
+	<div id="yolo"></div>
+
+
+
+
+
+
+
+
+	<script>
+		!function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/
+					.test(d.location) ? 'http' : 'https';
+			if (!d.getElementById(id)) {
+				js = d.createElement(s);
+				js.id = id;
+				js.src = p + "://platform.twitter.com/widgets.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}
+		}(document, "script", "twitter-wjs");
+	
+	</script>
+
+	
+</body>
+</html>
